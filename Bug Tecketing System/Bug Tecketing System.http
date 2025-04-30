@@ -1,0 +1,53 @@
+@Bug_Tecketing_System_HostAddress = http://localhost:5107
+
+GET {{Bug_Tecketing_System_HostAddress}}/api/Users
+Accept: application/json
+
+###
+
+POST {{Bug_Tecketing_System_HostAddress}}/api/Users/register
+Content-Type: application/json
+{
+     "name": "TestRegister",
+     "email": "Test@gmail.com",
+     "age": "23",
+     "password": "01234567"
+}
+##########################
+
+GET {{Bug_Tecketing_System_HostAddress}}/api/Projects
+Accept: application/json
+
+###
+GET {{Bug_Tecketing_System_HostAddress}}/api/Projects/FA4365D3-FBEA-45DD-BC1F-6ACAC5A1ED29
+Accept: application/json
+
+###
+
+POST {{Bug_Tecketing_System_HostAddress}}/api/Projects
+Content-Type: application/json
+{
+     "name": "TestProject",
+     "status": 0
+}
+##########################
+
+GET {{Bug_Tecketing_System_HostAddress}}/api/Bugs
+Accept: application/json
+
+###
+GET {{Bug_Tecketing_System_HostAddress}}/api/Bugs/2f0a9bfe-e058-4f3e-b241-c01895561e41
+Accept: application/json
+
+###
+
+POST {{Bug_Tecketing_System_HostAddress}}/api/Bugs
+Content-Type: application/json
+{
+     "name": "TestBugs",
+     "risk": 0,
+     "projectID": "FA4365D3-FBEA-45DD-BC1F-6ACAC5A1ED29"
+}
+
+##########################
+
